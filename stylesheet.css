@@ -1,0 +1,118 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: black;
+    margin: 0;
+
+}
+
+.box {
+    width: 460px;
+    box-shadow: 0 5px 16px(0,0,0,1);
+    position: relative;
+    min-height: 300px;
+    background: rgba(255, 255,255, 0.05);
+}
+.box::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    content: '';
+    pointer-events: none;
+    height: 100%;
+    background: rgba(255, 255,255, 0.05);
+    
+}
+
+.page {
+    height: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.page h2 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 25px;
+}
+
+.page .input-box {
+    margin-top: 21px;
+    width: 100%;
+}
+
+.page .input-box input {
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    background: transparent;
+    border: none;
+    padding: 5px 0;
+    font-size: 17px;
+    outline: none;
+    border-bottom: 3px solid aqua;
+
+}
+
+.page .input-box input[type="submit"] {
+    background-color: aqua;
+    max-width: 100px;
+    cursor: pointer;
+    font-weight: 920;
+    border: none;
+    color: white;
+}
+
+.page .input-box input[type="submit"]:hover {
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan
+}
+ ::placeholder {
+    color: white;
+ }
+.page p{
+    color: white;
+
+}
+
+.page p a{
+    color: #020000;
+    border-radius: 5px;
+    background: aqua;
+    font-weight: 800;
+    margin: 1%;
+}
+
+.page p a:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan
+}
+
+.box::after {
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    content: '';
+    animation: animate 15s linear infinite;
+    background: linear-gradient(90deg, ORANGE,WHITE,GREEN);
+}
+@keyframes animate {
+    100% {
+        filter: blur(60px) hue-rotate(360deg);
+    }
+    0%{
+        filter: blur(60px) hue-rotate(0deg);
+    }
+}
